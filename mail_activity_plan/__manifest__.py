@@ -3,7 +3,7 @@
 
 {
     "name": "mail_activity_plan",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "author": "Elabore",
     "website": "https://github.com/elabore-coop/ux-tools",
     "maintainer": "Laetitia Da Costa",
