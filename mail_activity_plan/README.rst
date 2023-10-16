@@ -9,17 +9,18 @@ Use Odoo normal module installation procedure to install ``mail_activity_plan``.
 
 Configuration
 =============
-To create activity templates, go to Settings > Technical > Discuss > Activity templates :
-
-Select a activiy type, select a user to assign, fiel the other fields (summary, note) 
 
 To create activities plans, go to Settings > Technical > Discuss > Activity plans :
 
-Provide a name, select or create activity templates
+Provice a name
+
+Add activity templates :
+
+Select an activity type, write a summary. Optionnaly assigne to a user and write a note.
 
 A plan can be related to many activity templates
 
-A activity template can be related to many plans
+A activity template can be related to only one plan
 
 A activity template is related to only one activity type
 
@@ -33,7 +34,9 @@ Go to Settings > Technical > Actions > Server Actions
 Provide a name, select a model, select action "[generate_activities]", select a plan.
 
 Once your new server action is configured, go to an instance of the chosen model, 
-click on the server action to generate automatically the activities of the plan
+click on the server action to generate automatically the activities of the plan.
+
+If nobody is assigned to a activity, the current user will be automatically assigned.
 
 Known issues / Roadmap
 ======================

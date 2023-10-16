@@ -20,13 +20,12 @@ class IrActionsServer(models.Model):
         records = self.env[self.model_name].browse(self._context.get('active_ids', self._context.get('active_id')))
         for record in records :
             for mail_activity_template in self.plan_id.mail_activity_template_ids:
-                date_deadline = self.env['mail.activity']._calculate_date_deadline(mail_activity_template.mail_activity_type_id)
                 record.activity_schedule(
                     activity_type_id=mail_activity_template.mail_activity_type_id.id,
                     summary=mail_activity_template.summary,
                     note=mail_activity_template.note,
-                    user_id=mail_activity_template.user_id.id,
-                    date_deadline=date_deadline
-                )   
+                    user_id=self.env.uid if not mail_activity_template.user_id else mail_activity_template.user_id.id,
+                    date_deadline=self.env['mail.activity']._calculate_date_deadline(mail_activity_template.mail_activity_type_id)
+                )
         return False
 

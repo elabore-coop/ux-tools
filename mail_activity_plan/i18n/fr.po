@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 08:34+0000\n"
-"PO-Revision-Date: 2023-10-13 08:34+0000\n"
+"POT-Creation-Date: 2023-10-16 15:18+0000\n"
+"PO-Revision-Date: 2023-10-16 15:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,19 +29,8 @@ msgstr ""
 
 #. module: mail_activity_plan
 #: model_terms:ir.ui.view,arch_db:mail_activity_plan.mail_activity_plan_view_form
-#: model_terms:ir.ui.view,arch_db:mail_activity_plan.mail_activity_template_view_tree
 msgid "Activities"
 msgstr "Activités"
-
-#. module: mail_activity_plan
-#: model:ir.model.fields,field_description:mail_activity_plan.field_mail_activity_template__mail_activity_plan_ids
-msgid "Activities plan"
-msgstr "Plan d'activités"
-
-#. module: mail_activity_plan
-#: model_terms:ir.ui.view,arch_db:mail_activity_plan.mail_activity_template_view_form
-msgid "Activity"
-msgstr "Activité"
 
 #. module: mail_activity_plan
 #: model:ir.model.fields,field_description:mail_activity_plan.field_mail_activity_template__mail_activity_type_id
@@ -53,17 +42,6 @@ msgstr "Type d'activité"
 #: model:ir.ui.menu,name:mail_activity_plan.menu_mail_activity_plan
 msgid "Activity plans"
 msgstr "Plans d'activités"
-
-#. module: mail_activity_plan
-#: model:ir.model.fields,field_description:mail_activity_plan.field_mail_activity_plan__mail_activity_template_ids
-msgid "Activity template"
-msgstr "Modèle d'activité"
-
-#. module: mail_activity_plan
-#: model:ir.actions.act_window,name:mail_activity_plan.mail_activity_template_action
-#: model:ir.ui.menu,name:mail_activity_plan.menu_mail_activity_template
-msgid "Activity templates"
-msgstr "Modèles d'activités"
 
 #. module: mail_activity_plan
 #: model_terms:ir.ui.view,arch_db:mail_activity_plan.mail_activity_plan_view_form
@@ -134,6 +112,11 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: mail_activity_plan
+#: model:ir.model.fields,field_description:mail_activity_plan.field_mail_activity_template__mail_activity_plan_id
+msgid "Mail Activity Plan"
+msgstr "Plan d'activités"
+
+#. module: mail_activity_plan
 #: model:ir.model,name:mail_activity_plan.model_mail_activity_plan
 msgid "Mail activity plan"
 msgstr "Plan d'activités"
@@ -165,6 +148,11 @@ msgid "Planning"
 msgstr ""
 
 #. module: mail_activity_plan
+#: model:ir.model.fields,field_description:mail_activity_plan.field_mail_activity_template__sequence
+msgid "Sequence"
+msgstr "Ordre"
+
+#. module: mail_activity_plan
 #: model:ir.model,name:mail_activity_plan.model_ir_actions_server
 msgid "Server Action"
 msgstr "Action du serveur"
@@ -173,6 +161,11 @@ msgstr "Action du serveur"
 #: model:ir.model.fields,field_description:mail_activity_plan.field_mail_activity_template__summary
 msgid "Summary"
 msgstr "Résumé"
+
+#. module: mail_activity_plan
+#: model:ir.model.fields,field_description:mail_activity_plan.field_mail_activity_plan__mail_activity_template_ids
+msgid "Template Activities"
+msgstr "Modèles d'activités"
 
 #. module: mail_activity_plan
 #: model:ir.model.fields,help:mail_activity_plan.field_base_automation__state
@@ -196,7 +189,12 @@ msgstr ""
 "- 'Envoyer E-Mail': envoyer un e-mail automatiquement (Discutez)\n"
 "- 'Ajouter Abonnés': ajouter des abonnés à un enregistrement (Discutez)\n"
 "- 'Créer une Nouvelle Activité': créer une activité (Discutez)\n"
-"- 'Générer les activités d'un plan d'activités': créer automatiquement les activités du plan dans le modèle choisi"
+"- 'Générer les activités d'un plan d'activités': créer une action générant automatiquement les activités du plan"
+
+#. module: mail_activity_plan
+#: model:ir.model.fields,help:mail_activity_plan.field_mail_activity_template__sequence
+msgid "Used to order activities."
+msgstr ""
 
 #. module: mail_activity_plan
 #: model:ir.model.fields,help:mail_activity_plan.field_base_automation__plan_id

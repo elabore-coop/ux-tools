@@ -37,45 +37,16 @@
                                 <field name="name"/>
                             </h1>
                         </div>
-                        <group string="Activities">
+                        <group string="Activity Templates">
                             <field name="active" invisible="1"/>
                             <field name="mail_activity_template_ids" nolabel="1">
-                                <tree editable="bottom">
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
                                     <field name="mail_activity_type_id"/>
                                     <field name="summary"/>
                                     <field name="user_id"/>
                                 </tree>
                             </field>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-
-        <record id="mail_activity_template_view_tree" model="ir.ui.view">
-            <field name="name">mail.activity.template.view.tree</field>
-            <field name="model">mail.activity.template</field>
-            <field name="arch" type="xml">
-                <tree string="Activities">
-                    <field name="mail_activity_type_id"/>
-                    <field name="summary"/>
-                    <field name="mail_activity_plan_ids"/>
-                </tree>
-            </field>
-        </record>
-
-        <record id="mail_activity_template_view_form" model="ir.ui.view">
-            <field name="name">mail.activity.template.view.form</field>
-            <field name="model">mail.activity.template</field>
-            <field name="arch" type="xml">
-                <form string="Activity">
-                    <sheet>
-                        <group>
-                            <field name="mail_activity_type_id"/>
-                            <field name="summary"/>
-                            <field name="user_id"/>
-                            <field name="mail_activity_plan_ids"/>
-                            <field name="note"/>
                         </group>
                     </sheet>
                 </form>
@@ -95,19 +66,6 @@
           parent="mail.mail_menu_technical"
           sequence="12"
         />
-
-        <record id="mail_activity_template_action" model="ir.actions.act_window">
-            <field name="name">Activity templates</field>
-            <field name="res_model">mail.activity.template</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-        <menuitem
-        id="menu_mail_activity_template"
-        action="mail_activity_template_action"
-        parent="mail.mail_menu_technical"
-        sequence="13"
-      />
 
     </data>
 </odoo>
