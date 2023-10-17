@@ -20,21 +20,9 @@ class MailActivityTemplate(models.Model):
     )
 
     sequence = fields.Integer('Sequence', default=1, help="Used to order activities.")
-    summary = fields.Char('Summary', compute="_compute_default_summary", store=True, readonly=False)
+    summary = fields.Char('Summary')
     user_id = fields.Many2one('res.users', string='Assigned to')
-    note = fields.Html('Note', compute="_compute_default_note", store=True, readonly=False)
-
-    @api.depends('mail_activity_type_id')
-    def _compute_default_summary(self):
-        for mail_activity_template in self:
-            if not mail_activity_template.summary and mail_activity_template.mail_activity_type_id and mail_activity_template.mail_activity_type_id.summary:
-                mail_activity_template.summary = mail_activity_template.mail_activity_type_id.summary
-
-    @api.depends('mail_activity_type_id')
-    def _compute_default_note(self):
-        for mail_activity_template in self:
-            if not mail_activity_template.note and mail_activity_template.mail_activity_type_id and mail_activity_template.mail_activity_type_id.default_description:
-                mail_activity_template.note = mail_activity_template.mail_activity_type_id.default_description
+    note = fields.Html('Note')
 
 class MailActivityPlan(models.Model):
     '''
