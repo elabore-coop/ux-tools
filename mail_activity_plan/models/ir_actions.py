@@ -3,6 +3,7 @@
 
 from odoo import fields, models
 
+
 class IrActionsServer(models.Model):
     """ Add activity plan option in server actions. """
     _inherit = 'ir.actions.server'
