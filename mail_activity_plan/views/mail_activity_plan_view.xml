@@ -39,7 +39,7 @@
                         </div>
                         <group string="Activity Templates">
                             <field name="active" invisible="1"/>
-                            <field name="mail_activity_template_ids" nolabel="1">
+                            <field name="mail_activity_template_ids" nolabel="1" colspan="2">
                                 <tree>
                                     <field name="sequence" widget="handle"/>
                                     <field name="mail_activity_type_id"/>

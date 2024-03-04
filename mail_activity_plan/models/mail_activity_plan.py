@@ -9,8 +9,7 @@ class MailActivityTemplate(models.Model):
     '''
     _name = 'mail.activity.template'
     _description = 'Mail activity template'
-    _order = 'sequence'
-    _rec_name = 'summary'
+    _order = 'sequence'    
 
     mail_activity_plan_id = fields.Many2one('mail.activity.plan', ondelete='restrict')
 
@@ -34,12 +33,6 @@ class MailActivityPlan(models.Model):
     _name = 'mail.activity.plan'
     _description = 'Mail activity plan'
 
-    @api.returns('self', lambda value: value.id)
-    def copy(self, default=None):
-        default = dict(default or {},
-                       name=_("%s (copy)", self.name))
-        return super(MailActivityPlan, self).copy(default=default)
-
     name = fields.Char('Name', required=True)
-    mail_activity_template_ids = fields.One2many('mail.activity.template', 'mail_activity_plan_id', string='Template Activities', copy=True)
+    mail_activity_template_ids = fields.One2many('mail.activity.template', 'mail_activity_plan_id', string='Template Activities')
     active = fields.Boolean(default=True)
