@@ -37,17 +37,19 @@
                                 <field name="name"/>
                             </h1>
                         </div>
-                        <page string="Activity Templates">
-                            <field name="active" invisible="1"/>
-                            <field name="mail_activity_template_ids">
-                                <tree>
-                                    <field name="sequence" widget="handle"/>
-                                    <field name="mail_activity_type_id"/>
-                                    <field name="summary"/>
-                                    <field name="user_id"/>
-                                </tree>
-                            </field>
-                        </page>
+                        <notebook>
+                            <page string="Activity Templates">
+                                <field name="active" invisible="1"/>
+                                <field name="mail_activity_template_ids">
+                                    <tree>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="mail_activity_type_id"/>
+                                        <field name="summary"/>
+                                        <field name="user_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
