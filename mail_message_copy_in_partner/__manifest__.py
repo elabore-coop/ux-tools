@@ -18,6 +18,7 @@
 mail_message_copy_in_partner
 =================
 If current model has partner_id field, all messages will be copied in partner's chatter
+New message is a note without recipients
 
 
 Installation
