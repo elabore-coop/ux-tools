@@ -1,42 +1,22 @@
 ====================
-mail_activity_plan
+mail_prevent_send_note_to_external
 ====================
 
 Installation
 ============
-Use Odoo normal module installation procedure to install ``mail_activity_plan``.
+Use Odoo normal module installation procedure to install ``mail_prevent_send_note_to_external``.
 
 
 Configuration
 =============
 
-To create activities plans, go to Settings > Technical > Discuss > Activity plans :
-
-Provice a name
-
-Add activity templates :
-
-Select an activity type, write a summary. Optionnaly assigne to a user and write a note.
-
-A plan can be related to many activity templates
-
-A activity template can be related to only one plan
-
-A activity template is related to only one activity type
+Nothing to do
 
 
 Usage
 =====
-Once your plan is configured, you can define a server-action to launch automatically the activities for a choose model
+If module is installed, notes will never send email to partners not linked to internal users.
 
-Go to Settings > Technical > Actions > Server Actions
-
-Provide a name, select a model, select action "[generate_activities]", select a plan.
-
-Once your new server action is configured, go to an instance of the chosen model, 
-click on the server action to generate automatically the activities of the plan.
-
-If nobody is assigned to a activity, the current user will be automatically assigned.
 
 Known issues / Roadmap
 ======================
@@ -57,7 +37,7 @@ Credits
 Contributors
 ------------
 
-* Laetitia Da Costa (https://github.com/LaetitiaElabore)
+* Clément Thomas
 
 Funders
 -------
